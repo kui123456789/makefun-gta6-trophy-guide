@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI (PS5)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; Offline guide &amp; tracker</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="lede">All 55 trophies — official names, descriptions and grades as PlayStation publishes them — each with a guide in our own words, its sources beside it, a road to the platinum, and a checklist that remembers your progress.</p>
+    <div class="statrow" id="statrow">
+      <span class="stat"><strong>55</strong> trophies</span>
+      <span class="stat"><strong>1</strong> platinum</span>
+      <span class="stat"><strong>2</strong> gold</span>
+      <span class="stat"><strong>6</strong> silver</span>
+      <span class="stat"><strong>46</strong> bronze</span>
+      <span class="stat"><strong>0</strong> online</span>
+      <span class="stat"><strong>28</strong> hidden</span>
+      <span class="stat"><strong>1</strong> possibly missable</span>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-line"><span id="progressText">0 of 55 earned</span><span id="progressPct">0%</span></div>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="warnings" id="warnings">
+    <h2>Before you start</h2>
+    <ul id="warningList"></ul>
+  </section>
+
+  <section class="roadmap" id="roadmap">
+    <h2>Road to the platinum — <span class="platinum-name">Vice Got a Price!</span></h2>
+    <p class="roadmap-intro">About 200 hours, difficulty 4/10, one playthrough (PowerPyx roadmap). No mission replay, no New Game+, no online trophies. Three stages, in order:</p>
+    <div class="stage-grid" id="stageGrid"></div>
+  </section>
+
+  <section class="toolbar" id="toolbar">
+    <div class="toolbar-row">
+      <input id="search" type="search" placeholder="Search a trophy, mission or place…" aria-label="Search trophies">
+      <select id="grade" aria-label="Filter by grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </div>
+    <div class="toolbar-row">
+      <div class="kind-filters" id="kindFilters" role="group" aria-label="Filter by kind">
+        <button type="button" data-kind="all" class="kind-btn active">All</button>
+        <button type="button" data-kind="story" class="kind-btn">Story</button>
+        <button type="button" data-kind="missable" class="kind-btn">⚠ Missable</button>
+        <button type="button" data-kind="collectibles" class="kind-btn">Collectibles</button>
+        <button type="button" data-kind="activities" class="kind-btn">Activities</button>
+        <button type="button" data-kind="online" class="kind-btn">Online</button>
+      </div>
+    </div>
+    <div class="toolbar-row">
+      <label class="check"><input type="checkbox" id="spoilerToggle"> Spoiler-safe: hide story trophies until earned</label>
+      <label class="check"><input type="checkbox" id="earnedOnly"> Earned only</label>
+      <label class="check"><input type="checkbox" id="hideEarned"> Hide earned</label>
+      <span class="spacer"></span>
+      <button type="button" id="exportBtn">Export progress</button>
+      <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+      <button type="button" id="resetBtn">Reset</button>
+    </div>
+    <p class="count-line" id="countLine"></p>
+  </section>
+
+  <section class="list" id="trophyList" aria-live="polite"></section>
+
+  <footer class="foot">
+    <p>Official trophy names, descriptions and grades are shown as PlayStation publishes them. Every guide is written in our own words for this guide and cites its sources beside it — a source is named or linked, never copied. Methods marked <strong>Unconfirmed</strong> are ones no published guide had pinned down by 20 November 2026, the day after launch.</p>
+    <p>Unofficial fan guide. Not affiliated with, endorsed by, or connected to Rockstar Games or Take-Two Interactive. No Rockstar artwork, logos or game images are used. This guide works fully offline: it loads nothing from the network.</p>
+    <p id="sourceNote"></p>
+  </footer>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>
